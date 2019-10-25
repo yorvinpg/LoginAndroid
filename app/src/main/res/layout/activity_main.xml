@@ -34,7 +34,7 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnvalidar"
         android:layout_width="350dp"
         android:layout_marginTop="30dp"
         android:layout_height="wrap_content"
