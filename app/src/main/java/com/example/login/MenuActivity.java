@@ -15,7 +15,10 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
         txtnom = findViewById(R.id.txtnom);
+        Bundle bundle = getIntent().getExtras();
+        String nombre = bundle.getString("nombre");
+
+        txtnom.setText("Bienvenido : " + nombre);
     }
 }
