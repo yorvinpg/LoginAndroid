@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                             txtcla.getText().toString().equals("palacios")) {
                         Intent b = new Intent(MainActivity.this,MenuActivity.class);
                         String nombre = txtnom.getText().toString();
-                        b.putExtra("nom",nombre);
+                        b.putExtra("nombre",nombre);
                         startActivity(b);
                     } else {
                         Toast.makeText(MainActivity.this, "usuario o contraseña incorrectas", Toast.LENGTH_SHORT).show();
