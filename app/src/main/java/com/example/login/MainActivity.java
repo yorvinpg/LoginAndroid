@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         btnvali.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Vemos que los campos no esten vacios
                 if (txtnom.getText().toString().isEmpty()){
                     Toast.makeText(MainActivity.this, "Campo Nombre Vacio", Toast.LENGTH_SHORT).show();
                     return;
@@ -38,15 +37,11 @@ public class MainActivity extends AppCompatActivity {
                     if (txtnom.getText().toString().equals("yorvin palacios") &&
                             txtcla.getText().toString().equals("palacios")) {
                         Intent b = new Intent(MainActivity.this,MenuActivity.class);
-                        //Enviamos el nombre a la segunda pantalla
                         String nombre = txtnom.getText().toString();
-                        getIntent().putExtra("nombre",nombre);
-                        //Inicializamos el intent
+                        b.putExtra("nom",nombre);
                         startActivity(b);
-
                     } else {
                         Toast.makeText(MainActivity.this, "usuario o contraseña incorrectas", Toast.LENGTH_SHORT).show();
-
                     }
 
                 }
